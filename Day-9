@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    printf("enter the word:");
+    scanf("%s", str);
+ if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' ||str[0] == 'U' || str[0] == 'A'||str[0] == 'E' || str[0] == 'I' || str[0] == 'O' || str[0] == 'U') {
+    printf("its a vowel ");}
+    else{
+    printf("its a consonant");
+
+}
+    return 0;
+}
