@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char correctPassword[] = "secret123"; 
+ 
+    char enteredPassword[50]; 
+
+    do {
+        printf("Enter your passcode: ");
+        scanf("%49s", enteredPassword);
+
+   
+        if (strcmp(enteredPassword, correctPassword) == 0) {
+            printf("Access Granted!\n");
+            break; // Exit loop on success
+        } else {
+            printf("Incorrect passcode. Try again.\n");
+        }
+    } while (1);
+
+    return 0;
+}
