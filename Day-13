@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+int multiply(int,int);
+
+int main() {
+   int x,y,result;
+    printf("enter two number ");
+    scanf("%d %d", &x,&y);
+    result=multiply(x,y);
+    printf("product=%d \n",result);
+ return 0;
+}
+int multiply(int a,int b)
+{
+        return a*b;
+}
