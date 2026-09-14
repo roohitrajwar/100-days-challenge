@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int num, remainder;
+    int product = 1;
+    int hasOddDigit = 0; 
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    int temp = num;
+
+    if (temp < 0) {
+        temp = -temp;
+    }
+
+ 
+    if (temp == 0) {
+        hasOddDigit = 0; 
+    }
+
+    // Loop to extract and process each digit
+    while (temp > 0) {
+        remainder = temp % 10; 
+
+        if (remainder % 2 != 0) { 
+            product *= remainder;
+            hasOddDigit = 1;     
+        }
+
+        temp = temp / 10; // Remove the last digit
+    }
+
+   
+    if (hasOddDigit) {
+        printf("The product of the odd digits of %d is: %d\n", num, product);
+    } else {
+        printf("There are no odd digits in %d, so the product is: 0\n", num);
+    }
+
+    return 0;
+}
